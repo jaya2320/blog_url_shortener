@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>
+        URL Shortner
+    </title>
+    <style>
+        table {
+            margin-left: 650px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" style="font-size: 25px; ">Home</a>
+    <table border="5px solid #000">
+        <thead>
+            <tr>
+                <th>Old url</th>
+                <th>New url</th>
+            </tr>
+        </thead>
+        {% for i in url %}
+        <tbody>
+            <tr>
+                <td>{{i.url}}</td>
+                <td>{{i.slug}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</body>
+</html>
